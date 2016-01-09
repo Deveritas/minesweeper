@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minesweeper</title>
+</head>
+
+<body>
+    <app>Loading...</app>
+</body>
+
+<!-- ES6-related imports -->
+<script src="/node_modules/angular2/bundles/angular2-polyfills.js"></script>
+<script src="/node_modules/es6-shim/es6-shim.min.js"></script>
+<script src="/node_modules/systemjs/dist/system.js"></script>
+<script>
+	System.config({
+		defaultJSExtensions: true,
+		map: { immutable: 'node_modules/immutable/dist/immutable.min' }
+	});
+</script>
+<script src="/node_modules/rxjs/bundles/Rx.js"></script>
+<script src="/node_modules/angular2/bundles/angular2.min.js"></script>
+<script>
+    //bootstrap the Angular2 application
+    System.import('dist/index').catch(console.log.bind(console));
+</script>
+
+</html>
